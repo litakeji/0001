@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorMediaControlBackground">#331b1b1b</color>
+    <color name="colorSeekBarBackground">#7d1b1b1b</color>
+    <color name="colorSeekBarSecondaryProgress">#bfbfbf</color>
+    <color name="colorSeekBarProgress">#f6bb27</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="background">#F7F4F0</color>
+    <color name="title_color">#333333</color>
+
+
+    <color name="zz_player_progress_first">#373938</color>
+    <color name="zz_player_progress_second">#666666</color>
+    <color name="zz_player_progress_bg">#FF6669</color>
+
+    <color name="color_e7e7e7">#e7e7e7</color>
+    <color name="color_green">#2ED184</color>
+    <color name="color_video_screen_background">#000000</color>
+
+
+</resources>
