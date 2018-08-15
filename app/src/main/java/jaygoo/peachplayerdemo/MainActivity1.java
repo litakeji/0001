@@ -53,21 +53,28 @@ public class MainActivity1 extends Activity {
     private int subjectId = 1;
     private int page = 1;
     public static int ID;
-   public static String NAME;
-   public static String src;
-private TextView back;
+    public static String NAME;
+    public static String src;
+    private TextView back;
 
     HashMap<String, String> paramsMap = new HashMap<>();
     HashMap<String, String> paramsMap2 = new HashMap<>();
     HashMap<String, String> paramsMap3 = new HashMap<>();
     HashMap<String, String> paramsMap4 = new HashMap<>();
     HashMap<String, String> paramsMap5 = new HashMap<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
 
         back = (TextView) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         radiogroup = (RadioGroup) findViewById(R.id.rgroup);//头部单选框
         mListView = (XListView) findViewById(R.id.list_view);
         mListView.setPullRefreshEnable(false);
@@ -78,7 +85,6 @@ private TextView back;
         geneItems();//数据
         userAdapter = new UserAdapter(this, R.layout.vw_list_item, items);
         mListView.setAdapter(userAdapter);
-
 
 
         handler = new Handler(getMainLooper()) {
@@ -143,8 +149,8 @@ private TextView back;
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //通过单击事件，获得单击选项的内容
-                 ID = userAdapter.getItem(position-1).getId();
-                 NAME=userAdapter.getItem(position-1).getName();
+                ID = userAdapter.getItem(position - 1).getId();
+                NAME = userAdapter.getItem(position - 1).getName();
                 geneItems3();
 
 
@@ -428,7 +434,6 @@ private TextView back;
     }
 
 
-
     private void onLoad() {
         mListView.stopRefresh();
         mListView.stopLoadMore();
@@ -436,6 +441,6 @@ private TextView back;
     }
 
 
-    }
+}
 
 

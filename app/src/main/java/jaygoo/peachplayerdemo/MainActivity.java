@@ -2,21 +2,16 @@ package jaygoo.peachplayerdemo;
 
 import android.content.res.Configuration;
 import android.net.Uri;
-import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import jaygoo.peachplayer.media.MediaLoaderView;
 import jaygoo.peachplayer.media.PeachVideoView;
 import jaygoo.peachplayer.media.ScreenChangeController;
-import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
