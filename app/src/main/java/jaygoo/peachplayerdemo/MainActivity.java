@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         if (mVideoView != null){
             mVideoView.pause();
-            mVideoView.start();
+//            mVideoView.start();
         }
         super.onStop();
 
