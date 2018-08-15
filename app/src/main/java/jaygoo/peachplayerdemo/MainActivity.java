@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         mMediaController = (CustomMediaPlayerController) findViewById(R.id.mediaController);
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         toolbar.setLogo(R.drawable.ic_video_back);
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         mScreenChangeController = new ScreenChangeController((FrameLayout)findViewById(R.id.video_screen),null);
 
         mVideoView.setLoaderView((MediaLoaderView)LayoutInflater.from(getBaseContext()).inflate(R.layout.layout_media_loader, null));
+
     }
 
     @Override
@@ -89,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         if (mVideoView != null){
             mVideoView.pause();
+            mVideoView.start();
         }
         super.onStop();
 
@@ -103,7 +106,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-    
-
 }

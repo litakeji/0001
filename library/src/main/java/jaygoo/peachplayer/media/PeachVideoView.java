@@ -502,49 +502,50 @@ public class PeachVideoView extends FrameLayout implements BaseMediaController.M
                     }
                     switch (arg1) {
                         case IMediaPlayer.MEDIA_INFO_VIDEO_TRACK_LAGGING:
-                            Log.d(TAG, "MEDIA_INFO_VIDEO_TRACK_LAGGING:");
+                            System.out.println("wocao11");
                             break;
                         case IMediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START:
-                            Log.d(TAG, "MEDIA_INFO_VIDEO_RENDERING_START:");
+                            System.out.println("wocao12");
                             break;
                         case IMediaPlayer.MEDIA_INFO_BUFFERING_START:
-                            Log.d(TAG, "MEDIA_INFO_BUFFERING_START:");
+                            System.out.println("wocao13");
                             if (mMediaLoaderView != null){
                                 mMediaLoaderView.startBuffering(getRealTcpSpeed(), getFormatedTcpSpeed());
                             }
                             break;
                         case IMediaPlayer.MEDIA_INFO_BUFFERING_END:
-                            Log.d(TAG, "MEDIA_INFO_BUFFERING_END:");
+                            System.out.println("wocao14");
                             if (mMediaLoaderView != null){
                                 mMediaLoaderView.stopBuffering();
                             }
                             break;
                         case IMediaPlayer.MEDIA_INFO_NETWORK_BANDWIDTH:
-                            Log.d(TAG, "MEDIA_INFO_NETWORK_BANDWIDTH: " + arg2);
+                            System.out.println("wocao15");
                             break;
                         case IMediaPlayer.MEDIA_INFO_BAD_INTERLEAVING:
-                            Log.d(TAG, "MEDIA_INFO_BAD_INTERLEAVING:");
+                            System.out.println("wocao16");
                             break;
                         case IMediaPlayer.MEDIA_INFO_NOT_SEEKABLE:
-                            Log.d(TAG, "MEDIA_INFO_NOT_SEEKABLE:");
+                            System.out.println("wocao17");
                             break;
                         case IMediaPlayer.MEDIA_INFO_METADATA_UPDATE:
-                            Log.d(TAG, "MEDIA_INFO_METADATA_UPDATE:");
+                            System.out.println("wocao18");
+
                             break;
                         case IMediaPlayer.MEDIA_INFO_UNSUPPORTED_SUBTITLE:
-                            Log.d(TAG, "MEDIA_INFO_UNSUPPORTED_SUBTITLE:");
+                            System.out.println("wocao19");
                             break;
                         case IMediaPlayer.MEDIA_INFO_SUBTITLE_TIMED_OUT:
-                            Log.d(TAG, "MEDIA_INFO_SUBTITLE_TIMED_OUT:");
+                            System.out.println("wocao110");
                             break;
                         case IMediaPlayer.MEDIA_INFO_VIDEO_ROTATION_CHANGED:
                             mVideoRotationDegree = arg2;
-                            Log.d(TAG, "MEDIA_INFO_VIDEO_ROTATION_CHANGED: " + arg2);
+                            System.out.println("wocao111");
                             if (mRenderView != null)
                                 mRenderView.setVideoRotation(mVideoRotationDegree);
                             break;
                         case IMediaPlayer.MEDIA_INFO_AUDIO_RENDERING_START:
-                            Log.d(TAG, "MEDIA_INFO_AUDIO_RENDERING_START:");
+                            System.out.println("wocao112");
                             break;
                     }
                     return true;
@@ -820,6 +821,7 @@ public class PeachVideoView extends FrameLayout implements BaseMediaController.M
 
     private void toggleMediaControlsVisiblity() {
         if (mMediaController.isShowing()) {
+            System.out.println("wocao3");
             mMediaController.hide();
         } else {
             mMediaController.show();
@@ -827,8 +829,9 @@ public class PeachVideoView extends FrameLayout implements BaseMediaController.M
     }
 
     @Override
-    public void start() {
+    public  void start() {
         if (isInPlaybackState()) {
+            System.out.println("wocao2");
             mMediaPlayer.start();
             mCurrentState = STATE_PLAYING;
         }
@@ -837,7 +840,9 @@ public class PeachVideoView extends FrameLayout implements BaseMediaController.M
 
     @Override
     public void pause() {
+
         if (isInPlaybackState()) {
+            System.out.println("wocao1");
             if (mMediaPlayer.isPlaying()) {
                 mMediaPlayer.pause();
                 mCurrentState = STATE_PAUSED;

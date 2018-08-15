@@ -50,7 +50,7 @@ public class UserAdapter extends ArrayAdapter<User.Data> {
 
 
         viewHolder.tv_item0.setText(objects.get(position).getName());
-        viewHolder.tv_item1.setText(objects.get(position).getId()+"");
+//        viewHolder.tv_item1.setText(objects.get(position).getId()+"");
         return convertView;
     }
 

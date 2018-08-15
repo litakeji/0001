@@ -39,6 +39,7 @@ public class CustomMediaPlayerController extends AndroidMediaController {
 
     @Override
     protected void onClickOptionPause(MediaPlayerControl mPlayer) {
+
         if (mPauseButton == null || mPlayer == null)
             return;
         if (mPauseButton instanceof ImageView){
