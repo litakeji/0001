@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mMediaController.setSupportActionBar(getSupportActionBar());
+        mMediaController.setMediaPlayer(mVideoView);
         // init player
         IjkMediaPlayer.loadLibrariesOnce(null);
         IjkMediaPlayer.native_profileBegin("libijkplayer.so");
@@ -66,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         if (mVideoView != null){
             mVideoView.resume();
+            mVideoView.start();
+
         }
         if (mMediaController != null){
             mMediaController.show();
